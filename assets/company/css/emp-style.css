@@ -1,0 +1,154 @@
+.margin-ten{margin-bottom: 10px !important;}
+.margin-thirty{margin-bottom: 15px !important;}
+.margin-sixty{margin-bottom: 60px !important;}
+.margin-seven{margin-left: 7%;}
+.margin-five{padding-left: 5px;}
+.margin-fifteen{margin-left: 15%;}
+.green-color{color: #76A874;}
+.red-color{color:#cb4040;}
+.gray-padding{background-color: #F0F0F0; padding: 1% 0;}
+.gray-padding-notify{background-color: #F0F0F0; padding: 1% 4% 1% 0px;}
+.white-padding{background-color: #fff; padding: 1% 0;}
+.white-padding-notify{background-color: #fff; padding: 1% 4% 1% 0px;}
+.border-side{border-right: 1px solid #ccc; padding-right: 7px;}
+.input-width{width: 85%; padding: 4px; height: auto;}
+.input-sm-width{width: 36%; padding: 4px; height: auto;}
+.input-sm-width1{width: 12%; padding: 4px; height: auto;}
+.input-sm-width2{width: 22%; padding: 4px; height: auto;}
+.input-xsm-width{width: 20%; padding: 0px; height: auto;}
+.input-md-width,.input-md-width1{width: 55%; padding: 4px; height: auto;}
+.input-lg-width{width: 85%; padding: 5px; height: auto;}
+.margin-one{margin-left: 10px;}
+.bootstrap-tagsinput {width: 100%;}
+.ad-title a{color:#015cc8;}
+.emp-img{width: 140px;}
+.best-emp-text{color: #444;}
+.flot-chart {
+    display: block;
+    height: 400px;
+}
+.flot-chart-content {
+    height: 100%;
+    width: 100%;
+}
+.notify-width{width: 170px;}
+.Secondy-fent-btn{
+    background: #d7d7d7 none repeat scroll 0 0;
+    color: #333;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 7px 16px;
+}
+.but-text-color{color:#015cc8;}
+.modal-footer1 {padding: 15px;text-align: right;}
+.modal-header {min-height: 16.43px;padding: 15px;border-bottom: 1px solid #e5e5e5;}
+.modal-body {position: relative;padding: 15px;}
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    outline: 0;
+    background-clip: padding-box;
+    padding: 5px;
+}
+
+/*Autocomplete Textbox style*/
+/*.typeahead, .tt-query, .tt-hint {
+    border: 2px solid #CCCCCC;
+    border-radius: 8px;
+    font-size: 24px;
+    height: 30px;
+    line-height: 30px;
+    outline: medium none;
+    padding: 8px 12px;
+    width: 396px;
+}*/
+.typeahead {
+    background-color: #FFFFFF;
+}
+.typeahead:focus {
+    border: 2px solid #0097CF;
+}
+.tt-query {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.tt-hint {
+    color: #999999;
+}
+.tt-dropdown-menu {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 12px;
+    padding: 8px 0;
+    width: 422px;
+}
+.tt-suggestion {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 3px 20px;
+}
+.tt-suggestion.tt-is-under-cursor {
+    background-color: #0097CF;
+    color: #FFFFFF;
+}
+.tt-suggestion p {
+    margin: 0;
+}
+.search-result{border:1px solid #ababab;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);border-radius: 2px;min-width: 312px;}
+.search-content{padding-left:10px;}  
+ul#Dropdownposition li{cursor:pointer;}
+ul#Dropdownposition li:hover{background-color:#f7f7f7;}
+@media screen and (max-width:1200px) {
+.btn-search-red{width: 17%;}
+.gray-padding-notify{padding: 1% 8% 1% 0px;}
+.white-padding-notify{padding: 1% 8% 1% 0px;}
+}
+@media screen and (max-width:765px) {
+.btn-search-red{width: 42%;}
+}
+@media screen and (max-width:640px) {
+.gray-padding-notify{padding: 1% 10% 1% 0px;}
+.white-padding-notify{padding: 1% 10% 1% 0px;}
+}
+
+
+@media screen and (max-width:550px) {
+.plan-left{width: 100%; margin-bottom: 10px;}
+.plan-right{width: 100%;}
+.search-left{width: 38%;}
+.search-right{width: 62%;}
+}
+@media screen and (max-width:470px) {
+    .left{width: 54%;}
+    .right{width: 46%;}
+    .edit-left{width: 40%;}
+    .edit-right{width: 60%;}
+    .folder-left{width: 82%;}
+    .folder-right{width: 100%;}
+    .input-md-width1{width: 75%;}
+    .search-right{width: 75%;}
+    .btn-search-red{width: 60%;}
+ }
+ @media screen and (max-width:450px) {
+    .input-sm-width2{width: 41%; margin-bottom: 8px;}
+    .input-sm-width1{width: 31%;}
+    .salary-text{margin-right: 8%;}
+    .exp-input{width: 60%;}
+    .response-left{width: 44%;}
+    .response-mid{width: 51%;}
+    .response-right{width: 100%;}
+ }
+ @media screen and (max-width:400px) {
+    .search-right{width: 100%;}
+    .salary-input{margin-left: 3%;}
+    .salary-rs{width: 100%;}
+    .short-head{width: 65%;}
+ }
+  @media screen and (max-width:360px) {
+    .salary-rs{width: 128%;}
+    .salary-input{margin-left: 7%;}
+    .exp-input{width: 85%;}
+  }

@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+
+.main-minhight {
+    min-height: 660px;
+}
+.gray-padding {
+    background-color: #f0f0f0;
+    padding: 1% 0;
+}
+.brand-padding{
+	padding:0px !important;}  
+	    
+.righttext-padding {
+    padding: 15px;
+}
+.bottom-space{ margin-bottom:15px !important;}    
+
+.res_email_show {display:none;}

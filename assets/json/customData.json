@@ -1,0 +1,28 @@
+{
+	"items1" : [
+		{
+			"img": "images/microsoft.png",
+			"alt" : "Owl Image 1"
+		},
+		{
+			"img": "images/landt_infotech.png",
+			"alt" : "Owl Image 2"
+		},
+		{
+			"img": "images/accenture.png",
+			"alt" : "Owl Image 1"
+		},
+		{
+			"img": "images/landt_infotech.png",
+			"alt" : "Owl Image 2"
+		},
+		{
+			"img": "images/landt_infotech.png",
+			"alt" : "Owl Image 1"
+		},
+		{
+			"img": "images/microsoft.png",
+			"alt" : "Owl Image 2"
+		}
+	]
+}

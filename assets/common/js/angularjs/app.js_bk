@@ -1,0 +1,48 @@
+var app = angular.module('searchApp',[]);
+app.controller('searchCtrl',function($scope,$window,$http) {
+	var base_url = window.location.protocol+"//"+window.location.host;
+	
+	/*
+	$scope.Countries = [{Id: 0, Name: 'Select Region or Country'},{Id: 1, Name: 'The Carribbean'},{Id: 2, Name: 'Asia'},{Id: 3,Name: 'North America'},{Id: 4, Name:'Eastern Europe'},
+						{Id:5, Name:'Eastern Europe'},{Id:6, Name:	'South America'},{Id:7, Name:'India'} ,{Id:8, Name:'Singapore'},{Id:9, Name:'South Africa'},
+						{Id:10, Name:'United States of America'}];
+						
+	$scope.selectCountry = function() { 
+		 var countryId = $scope.country;
+         var countryName = $.grep($scope.Countries, function (country) {
+              return country.Id == countryId;
+         })[0].Name;
+         var cname = countryName;
+		 $scope.resCountry = cname;
+		
+	}      
+	
+	$scope.Areas = [{Id: 0, Name: 'Area of Experience'},{Id: 1, Name: 'All'},{Id: 2, Name: 'Area#1'},{Id: 3,Name: 'Area#2'},{Id: 4, Name:'Area#3'},
+						{Id:5, Name:'Area#4'},{Id:6, Name:	'Area#5'},{Id:7, Name:'Area#6'} ,{Id:8, Name:'Area#7'},{Id:9, Name:'Area#8'}];
+						
+	$scope.selectArea = function() { 
+		 var areaId = $scope.area;
+         var areaName = $.grep($scope.Areas, function (area) {
+              return area.Id == areaId;
+         })[0].Name;
+         var aname = areaName;
+		 $scope.resArea = aname; 
+		
+	} */
+	
+	$scope.guessPosition=function(){
+      		
+		var query = $scope.position;
+		$http({
+			    url: base_url+'/jsonapi/getposition',
+			    method: "POST",
+			    headers: {'Content-Type': 'application/json'},
+			    data: JSON.stringify()
+			    }).success(function (data) {
+			       $scope.positions=data.position_result;
+				   //$scope.refresh();	
+			    }).error(function (data) {});
+       }
+	   
+	   
+});  

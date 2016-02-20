@@ -1,0 +1,65 @@
+.sizes-one{ width: 10%;}
+.sizes-two{width: 20%;}
+.sizes-three{width: 30%;}
+.sizes-four{width: 40%;}
+.sizes-five{width: 50%;}
+.sizes-six{width: 60%;}
+.sizes-seven{width: 70%;}
+.sizes-eight{width: 80%;}
+.sizes-nine{width: 90%;}
+
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+.nav> li a{ display:block;}
+
+.lg-bottom-mar {
+    margin-bottom: 15px;
+
+}
+.Secondy-btn {
+    display: inline-block;
+    background: #CB4040 none repeat scroll 0% 0%;
+    color: #FFF;
+    padding: 4px 16px;
+    margin-top: 10px;
+}
+.Secondy-fent-btn {
+    display: inline-block;
+    background: #d7d7d7 none repeat scroll 0% 0%;
+    color: #333;
+    padding: 7px 16px;
+    margin: 10px 0;
+}
+.but-text-color{color: #015cc8 !important;}
+.Secondy-fent-btn:hover {
+   background: #ccc;
+    color: #333;
+    text-decoration: none;
+   
+}
+.Secondy-btn:hover {
+   background: #B33030;
+    color: #FFF;
+    text-decoration: none;
+   
+}
+.icon-widtn {
+    float: left;
+    width: 13%;
+	margin-left:4%;
+}
+.icon-widtn-two{
+	float: left;
+    width: 15%;
+	}
+.border-side{border-right: 1px solid #ccc; padding-right: 7px;}
+.test-color{ color: #ccc; font-size: 16px;}
+.gray-padding{ padding: 1% 0;}
+.gray-padding:hover{background-color: #F0F0F0; }
+.white-padding{background-color: #fff; padding: 1% 0;}
+.margin-ten{margin-bottom: 10px !important;}
+.margin-thirty{margin-bottom: 15px !important;}
+.green-color{color: #76A874;}
+.red-color{color:#cb4040;}
+.bootstrap-tagsinput {width: 100%;}   
