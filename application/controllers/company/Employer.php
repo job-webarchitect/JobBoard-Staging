@@ -13,7 +13,7 @@ class Employer extends JobportalGlobal_Controller
 		}
 		
 		$this->load->model('mdl_company/Mdl_employer');
-		//$this->load->library('Mandrill');
+		//$this->load->library('Mandrill'); 
 		//$this->config->load('paypal');
 		$this->load->library('Cart');
 		$this->load->helper('geo_location');
