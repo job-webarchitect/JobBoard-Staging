@@ -66,6 +66,22 @@ class Common_model extends CI_Model
 	}	
 	
 	/*
+	 * Get Position Details
+	 */	
+	public function getPositionCollection($status='') {
+		$position_field = "positionname_".$this->input->cookie('lang_cookie');
+		$this->db->select("$position_field as value, positionid as id");
+		$this->db->from('position_detail');
+		
+		if(!empty($status)) {
+			$this->db->where('status',$status);
+		}
+		
+		$resWorkexp = $this->db->get();
+		return $resWorkexp->result_array();	
+	}	
+	
+	/*
 	 *  Get Countries Details
 	 */ 
 	public function getCountriesCollection($status='')  {

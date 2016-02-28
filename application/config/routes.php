@@ -76,6 +76,7 @@ $route['employer/reopen_job'] = 'company/employer/reopen_job';
 $route['employer/modify_company'] =  'company/employer/edit_company';
 $route['employer/all_employer'] =  'company/employer/view_employer';
 $route['employer/request_employer'] =  'company/employer/unapprove_employer';
+$route['employer/job_responses/(:any)/(:any)'] =  'company/employer/candidate_job_response/$1/$2';
 $route['employer/shortlist'] =  'company/employer/candidate_shortlist';
 $route['employer/onhold'] =  'company/employer/candidate_onhold';
 $route['employer/reject'] =  'company/employer/candidate_reject';

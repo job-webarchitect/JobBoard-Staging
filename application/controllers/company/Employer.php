@@ -555,6 +555,62 @@ class Employer extends JobportalGlobal_Controller
 		$emp_content['right_side'] = "company/company_views/unapprove_employers";
 		$this->load->view('company/company_temp/emp_layout',$emp_content);
 	}
+	
+	/*******************************************************************************************************************************
+	 *	JOB Responses
+	 *******************************************************************************************************************************/
+	
+	/*
+	 * Manage Job Resposnes
+	 */	
+	
+	public function candidate_job_response($status='all',$positionid='0') {
+		$emp_content['title'] = "Modify Company Details";
+		$emp_content['top_search'] = ""; 
+		$emp_content['left_sidebar'] = "";
+		$emp_content['right_side'] = "company/company_views/candidate_job_responses";
+		
+		// Update Response Status
+		if($this->input->post('update_to_status')){
+				$job_responses = $this->input->post('job_response');
+				$update_to_status = $this->input->post('update_to_status');
+				
+				// Update Job Respone Status
+				$update_data = array();
+				$update_data['shortlisted_status'] = $update_to_status;
+				$res =  $this->Mdl_employer->update_job_response($job_responses,$update_data);
+				// Status Message
+				if($res == 1) {
+					$this->session->set_flashdata('temp_succ','Status has been updated successfully');
+				} else {
+					$this->session->set_flashdata('temp_err','Error.. Please tra again');
+				}
+		}
+		
+		// Get the collection of Job Response
+		$emp_content['jobResponses'] = $this->Mdl_employer->getJobResponse($status,$this->jp_id,$positionid);
+		
+		// Get Position Details
+		$emp_content['position_details'] = $this->Common_model->getPositionCollection(1);
+		$emp_content['status'] = $status;
+		$emp_content['positionid'] = $positionid;
+		
+		if($emp_content['status'] == '1') { 
+			$emp_content['grid_title'] = 'Shortlisted Candidate';
+			$emp_content['grid_status_title'] = 'Shortlisted Date';
+		} else if($emp_content['status'] == '3') { 
+			$emp_content['grid_title'] = 'Rejected Candidate';
+			$emp_content['grid_status_title'] = 'Rejected Date';
+		} else if($emp_content['status'] == '2') { 
+			$emp_content['grid_title'] = 'On-hold Candidate';
+			$emp_content['grid_status_title'] = 'On-hold Date';
+		} else {
+			$emp_content['grid_title'] = 'Applied Candidates';
+			$emp_content['grid_status_title'] = 'Updated Date';
+		}
+		
+		$this->load->view('company/company_temp/emp_layout',$emp_content);	
+	}
 	public function candidate_shortlist()
 	{
 		$emp_content['title'] = "Modify Company Details";

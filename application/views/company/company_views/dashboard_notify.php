@@ -66,7 +66,7 @@
             <div class="col-xs-3"><?php echo $jobDetsils['first_name']." ".$jobDetsils['last_name'];?></div>
             <div class="col-xs-3"><?php echo $jobDetsils['opening_date'];?></div>
             <div class="col-xs-2"><?php echo $jobDetsils['closing_date'];?></div>
-            <div class="col-xs-1"><?php echo $jobDetsils['response_count'];?></div>
+            <div class="col-xs-1"><a href="<?php echo base_url()?>employer/job_responses/all/0"><?php echo $jobDetsils['response_count'];?></a></div>
             </div>
     <?php  }
 	} else {

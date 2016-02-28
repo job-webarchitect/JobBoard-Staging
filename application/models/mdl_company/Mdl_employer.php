@@ -392,6 +392,64 @@ class Mdl_employer extends CI_Model
     	$reminder_messages = $this->db->get();
 		return $reminder_messages->result_array();
 	}
+	public function getJobResponse($status='',$employee_id='',$positionid='') {
+		$position_field = "pd.positionname_".$this->input->cookie('lang_cookie');
+		$location_field = "location.locationname_".$this->input->cookie('lang_cookie');
+			
+		$this->db->select("a.userid,
+		a.applyid,
+		a.jobid,
+		a.applieddate,
+		a.matched_percentage,
+		a.employer_viewed_status,
+		a.employerid,
+		a.shortlisted_status,
+		DATE_FORMAT(a.shortlisted_date, '%m/%d/%Y') as shortlisted_date,
+		u.first_name,
+		u.last_name,
+		$position_field as position_name
+		");
+		$this->db->from('apply_job as a');
+		$this->db->join('job_detail as j','j.job_id = a.jobid','left');
+		$this->db->join('jp_user_info as u','u.userid = a.userid','left');
+		$this->db->join('position_detail as pd','j.positionid=pd.positionid','left');
+		//$this->db->join('company_profile as cp','cp.company_id=j.company_id','left');
+		//$this->db->join('qualification_setup as q','q.qualification_id=j.qualification_id','left');
+		//$this->db->join('workexperience_setup as we_min','we_min.workexperience_id=j.workexperience_id_min','left');
+		//$this->db->join('workexperience_setup as we_max','we_max.workexperience_id=j.workexperience_id_max','left');
+		//$this->db->join('location_details as location','location.locationid=j.locationid','left');
+		/*cp.company_name,
+		q.qualification_name,
+		$location_field as location
+		we_min.workexperience_name as exp_min,
+		we_max.workexperience_name as exp_max,*/
+
+		if(!empty($status) && $status != 'all') {
+			$this->db->where('a.shortlisted_status =',$status);
+		}
+		
+		// Filter with Employee
+		if(!empty($employee_id)) {
+			$this->db->where('j.job_postedby =',$employee_id);
+		}
+		
+		// Filter with Position
+		if(!empty($positionid)) {
+			$this->db->where('j.positionid =',$positionid);
+		}
+		
+    	$reminder_messages = $this->db->get();
+		return $reminder_messages->result_array();
+	}
+	
+	/*
+	 * Update Job Response
+	 */
+	public function update_job_response($job_responses,$update_data) {
+		$this->db->where_in('applyid', $job_responses);
+		return $this->db->update('apply_job',$update_data);
+	}
+	
 	
 }
 ?>
